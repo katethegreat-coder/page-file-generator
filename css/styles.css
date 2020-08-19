@@ -1,0 +1,154 @@
+/************************************
+*                INDEX              *
+************************************/
+
+.welcome {
+    background-color: #4ABDAC;
+}
+
+.fa-info-circle{
+    color: #FC4A1A;
+    font-size: 2rem;
+}
+
+.modal-title {
+    color: #F78733;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+}
+
+.fa-check {
+    color: #4ABDAC;
+    font-size: 1.3rem;
+}
+
+.modal-body p {
+    font-size: 1rem;
+}
+
+/************************************
+*               HEADER              *
+************************************/
+
+
+.title h1 {
+    color: #4ABDAC;
+}
+
+/************************************
+*           PAGE GENERATOR          *
+************************************/
+
+.container {
+    margin-bottom: 10vh;
+    padding-bottom: 9vh;
+}
+
+
+
+/************ Pages names **********/
+
+.input-page {
+    width: 19.938rem;
+}
+
+.item-name {
+    background-color: #4ABDAC;
+    border: 1px solid #4ABDAC;
+    border-radius: .25rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+.item-name:hover {
+    opacity: 0.5;
+    text-transform: uppercase;   
+}
+
+#newItemButton {
+    display: none;
+}
+
+/************************************
+*           ERROR MESSAGES          *
+************************************/
+
+.jumbotron h5 {
+    font-size: 3rem;
+}
+
+.fa-exclamation-circle {
+    font-size: 1.8rem;
+}
+
+/************************************
+*           PROJECT VIEW            *
+************************************/
+
+
+
+.card-text {
+    font-size: 1.1rem;
+}
+
+.card-text-page {
+    font-size: 1.1rem;
+}
+
+.zip-btn:hover {
+    opacity: 0.7;
+}
+
+#download {
+    border: none;
+}
+
+/************************************
+*               FOOTER              *
+************************************/
+
+
+footer {
+    background-color: #4ABDAC;
+    height: 10vh;
+}
+
+.logo {
+    width: 5rem;
+    height: 100%;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}  
+
+
+/************************************
+*            RESPONSIVE             *
+************************************/
+@media (max-width:576px) {
+
+    .input-page {
+        width: 28.938rem;
+    }
+    
+
+    
+}
+
+@media (max-width:768px) {
+    .welcome {
+        padding-left: 0;
+    }
+
+    .input-page {
+        width: 9.938rem;
+    }
+    
+
+    
+}
