@@ -95,8 +95,7 @@
                             </div>
                         </div>
                     </form>
-                    <a href="page_generator.php"><button type="button" id="return" class="btn btn-secondary py-2">Accueil</button></a>
-                </div>
+                    <a href="page_generator.php"><button type="button" id="return" class="btn btn-secondary py-2" data-toggle="tooltip" data-placement="right" title="Attention, au retour à l'accueil, les données sont supprimées !">Accueil</button></a>
             </div>
         </div>
     </div>

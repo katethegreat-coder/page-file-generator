@@ -37,3 +37,6 @@
     // Delete the content of the table "project"
     $sql='DELETE FROM `project`;';
     $query = $db->query($sql);
+
+    // Disconnect from the DB
+    require_once('inc/disconnect.php');

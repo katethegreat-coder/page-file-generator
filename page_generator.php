@@ -106,7 +106,7 @@ session_start();
                                 // // Get file names without the extension
                                 $filename_without_extension = basename($original_filename, '.'.$extension);
     
-                                // Generate new file names // Replace wityh variable to change name
+                                // Generate new file names 
                                 $new_filename = str_replace('', '_', $filename_without_extension) . '.' . $extension; 
     
                                 // Get files extension
@@ -142,30 +142,7 @@ session_start();
                                         } 
                                     }
 
-                                    // Copy the file
-                                    if (move_uploaded_file($_FILES['userfile']['tmp_name'][$key], $target_dir . $page_title .'.'. $extension)){
-                                        $htmlPage= '
-                                            <!DOCTYPE html>
-                                            <html lang="fr">
-                                            <head>
-                                                <meta charset="UTF-8">
-                                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-                                                <link rel="icon" href="img/favicon/favicon.ico" />
-                                                <title>'.$client.'® | '.$page_title.' | Maquette Site Internet</title>
-                                            </head>
-                                            <body>
-                                                <img src="'.$page_title.'.'. $extension.'" alt="maquette'. $client.'">
-                                            </body>
-                                            </html>
-                                            ';
-
-                                        $open = fopen('files/'.$page_title.'.html','w');
-                                        fwrite($open, $htmlPage);
-                                        fclose($open);
-                                    } 
-
-                                    // Copy the file
+                                    // Copy the logo file
                                     if((move_uploaded_file($logo['tmp_name'], $completeName_logo))){
                                             
                                         $indexHtmlPage1= '
@@ -193,6 +170,7 @@ session_start();
                                                                 
                                         ';
 
+                                        // Retrieve all HTML files saved in files
                                         $fileNames = array_map(
                                             function($filePath) {
                                                 return basename($filePath);
@@ -336,7 +314,7 @@ session_start();
                 <div class="input-group-prepend">
                     <button class="btn btn-outline-secondary" type="button" id="client">Client</button>
                 </div>
-                <input type="text" class="form-control" placeholder="" id="client" name="client" style="color: #e64827">
+                <input type="text" class="form-control" placeholder="Saisissez un nom d'au moins deux caractères" id="client" name="client" style="color: #e64827">
             </div>
         
             <!-- Client logo -->
@@ -345,7 +323,7 @@ session_start();
                     <button class="btn btn-outline-secondary" type="button" id="logo" title="à nommer logo">Logo</button>
                 </div>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input logo_file" id="logo" name="logo" title="à nommer logo">
+                    <input type="file" class="custom-file-input logo_file" id="logo" name="logo" title="logo en jpg, svg, png">
                     <label class="custom-file-label label_logo" for="logo" data-browse="Parcourir">Choisissez un fichier</label>
                 </div>
             </div>
@@ -387,12 +365,7 @@ session_start();
                     <input class="item-name form-control my-2" type="text" value="accueil" name="itemField[]"/>
                     <div class="custom-file upload_file my-2">
                         <input name="userfile[]" class="custom-file-input item-file form-control" type="file" multiple/>
-                        <label class="custom-file-label label_fileName" for="userfile" data-browse="Parcourir">Choisissez un jpg </label>
-                    </div>
-                    <div class="m-auto pl-2">
-                        <button type="button" class="close remove" aria-label="Close" title="Cliquer pour supprimer">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <label class="custom-file-label label_fileName" for="userfile" data-browse="Parcourir">Maquette en jpg </label>
                     </div>
                 </div>
             </div>

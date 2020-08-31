@@ -47,13 +47,6 @@ $(function() {
       }
   });
 
-  // Remove the default input
-  $('.page-name-file .remove').on('click', function() {
-    var parent =  $(this).closest($('.page-name-file'));
-    console.log(parent);
-    $(parent).remove();
-  });
-
   /****************************
   *     Uploaded file names    *
   ****************************/
@@ -85,7 +78,7 @@ $(function() {
   });
 
   /********************************
-  * Launch Ajax to erase the zip  *
+  * Launch Ajax to erase files    *
   ********************************/
 
   $('#return').click(function(){
@@ -104,6 +97,12 @@ $(function() {
 
   $('.welcome').modal('show');
 
+
+  /********************************
+  *            Tool tip           *
+  ********************************/
+
+  $('[data-toggle="tooltip"]').tooltip()
 
 });
 
